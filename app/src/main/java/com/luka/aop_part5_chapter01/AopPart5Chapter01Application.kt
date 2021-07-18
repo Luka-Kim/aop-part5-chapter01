@@ -1,6 +1,7 @@
 package com.luka.aop_part5_chapter01
 
 import android.app.Application
+import com.luka.aop_part5_chapter01.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -14,7 +15,7 @@ class AopPart5Chapter01Application : Application() {
         startKoin {
             androidLogger(Level.ERROR)
             androidContext(this@AopPart5Chapter01Application)
-            modules()
+            modules(appModule)
         }
     }
 }
